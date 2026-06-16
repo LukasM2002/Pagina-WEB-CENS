@@ -1,0 +1,17 @@
+/* ---------- RESET GENERAL ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #7db1e5;
+  color: rgb(220, 11, 11);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}

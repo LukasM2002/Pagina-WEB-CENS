@@ -1,127 +1,389 @@
-/* ---------- RESET GENERAL ---------- */
+/*==================================
+            RESET
+==================================*/
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+/*==================================
+             BODY
+==================================*/
 
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#f2f2f2;
+    color:#222;
 }
 
-/* ---------- HEADER ---------- */
+/*==================================
+            HEADER
+==================================*/
+
 header{
-    background-color: #74d13b;
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 15px 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    background:linear-gradient(90deg,#74d13b,#007bff);
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:20px 35px;
 }
 
 header img{
-    border-radius: 10px;
+    width:120px;
+    height:auto;
 }
 
 header h1{
-    font-size: 28px;
+    color:#ffffff;
+    font-size:30px;
+    font-weight:bold;
 }
 
-/* ---------- MENU ---------- */
+/*==================================
+             MENÚ
+==================================*/
+
 nav{
-    background: linear-gradient(90deg, #74d13b, #007bff);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    background:linear-gradient(90deg,#74d13b,#007bff);
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
 }
 
 nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 nav li{
-    position: relative;
+    position:relative;
 }
 
 nav a{
-    display: block;
-    padding: 15px 20px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    display:block;
+    padding:20px 25px;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
 nav a:hover{
-    background-color: rgba(255,255,255,0.25);
+    background:rgba(255,255,255,.18);
 }
 
-/* ---------- CONTENIDO ---------- */
+/*==================================
+            SUBMENÚ
+==================================*/
+
+.submenu-contenido{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:260px;
+    background:linear-gradient(180deg,#74d13b,#007bff);
+    border-radius:0 0 10px 10px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.20);
+    z-index:999;
+}
+
+.submenu-contenido li{
+    width:100%;
+}
+
+.submenu-contenido li a{
+    color:#ffffff;
+    padding:15px 18px;
+}
+
+.submenu-contenido li a:hover{
+    background:rgba(255,255,255,.30);
+}
+
+.submenu:hover .submenu-contenido{
+    display:block;
+}
+
+/*==================================
+            CONTENIDO
+==================================*/
+
 main{
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
 }
 
-/* ---------- SECCIONES ---------- */
-section{
-    background-color: white;
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+/*==================================
+         PRESENTACIÓN
+==================================*/
+
+.presentacion{
+    background:linear-gradient(135deg,#eef5fd,#91bce8);
+    border-radius:18px;
+    padding:60px 45px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
-section h2{
-    color: #007bff;
-    margin-bottom: 15px;
-    border-bottom: 3px solid #74d13b;
-    padding-bottom: 8px;
+.presentacion h2{
+    font-size:58px;
+    color:#00468b;
+    margin-bottom:25px;
 }
 
-section p{
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+.presentacion p{
+    font-size:22px;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
 }
 
-section img{
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    border-radius: 10px;
+/*==================================
+          INFO CENS
+==================================*/
+
+.info-cens{
+    background:white;
+    margin-top:35px;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
-/* ---------- FOOTER ---------- */
+.info-cens h2{
+    color:#00468b;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.info-cens p{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.info-cens ul{
+    margin-left:25px;
+}
+
+.info-cens li{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+/*==================================
+            FOOTER
+==================================*/
+
 footer{
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    background:#1f1f1f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/*==================================
+      PÁGINAS DE MODALIDADES
+==================================*/
+
+.banner-modalidad{
+    background:linear-gradient(135deg,#eef5fd,#91bce8);
+    border-radius:18px;
+    padding:60px 45px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.banner-modalidad h2{
+    font-size:48px;
+    color:#00468b;
+    margin-bottom:20px;
+}
+
+.banner-modalidad p{
+    font-size:22px;
+    line-height:1.7;
+    max-width:900px;
+    margin:auto;
+}
+
+.seccion-modalidad{
+    background:white;
+    margin-top:35px;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.seccion-modalidad h2{
+    color:#00468b;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.seccion-modalidad p{
+    font-size:20px;
+    line-height:1.7;
+}
+
+.tarjetas-modalidad{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.tarjeta-modalidad{
+    background:#eef5fd;
+    padding:25px;
+    border-radius:15px;
+    border-left:6px solid #74d13b;
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
+}
+
+.tarjeta-modalidad h3{
+    color:#00468b;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.tarjeta-modalidad p{
+    font-size:18px;
+}
+
+.tabla-modalidad{
+    width:100%;
+    border-collapse:collapse;
+    font-size:20px;
+}
+
+.tabla-modalidad th{
+    background:linear-gradient(90deg,#74d13b,#007bff);
+    color:#000;
+    padding:15px;
+}
+
+.tabla-modalidad td{
+    padding:15px;
+    border-bottom:1px solid #ccc;
+}
+
+.tabla-modalidad tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+.volver{
+    text-align:center;
+    margin-top:35px;
+}
+
+.volver a{
+    display:inline-block;
+    background:linear-gradient(90deg,#74d13b,#007bff);
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    padding:15px 30px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.volver a:hover{
+    transform:scale(1.05);
+}
+
+/* Responsive modalidades */
+
+@media(max-width:768px){
+
+    .banner-modalidad{
+        padding:40px 25px;
+    }
+
+    .banner-modalidad h2{
+        font-size:34px;
+    }
+
+    .banner-modalidad p{
+        font-size:18px;
+    }
+
+    .seccion-modalidad{
+        padding:25px;
+    }
+
+    .seccion-modalidad h2{
+        font-size:26px;
+    }
+
+    .seccion-modalidad p,
+    .tabla-modalidad,
+    .tarjeta-modalidad p{
+        font-size:18px;
+    }
+}
+
+/*==================================
+          RESPONSIVE
+==================================*/
+
 @media(max-width:768px){
 
     header{
-        flex-direction: column;
-        text-align: center;
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+    }
+
+    header img{
+        width:100px;
     }
 
     header h1{
-        font-size: 22px;
+        font-size:24px;
     }
 
     nav ul{
-        flex-direction: column;
+        flex-direction:column;
     }
 
     nav a{
-        text-align: center;
+        text-align:center;
+    }
+
+    .submenu-contenido{
+        position:static;
+        border-radius:0;
+    }
+
+    .presentacion{
+        padding:40px 25px;
+    }
+
+    .presentacion h2{
+        font-size:38px;
+    }
+
+    .presentacion p{
+        font-size:18px;
+    }
+
+    .info-cens{
+        padding:25px;
+    }
+
+    .info-cens h2{
+        font-size:24px;
+    }
+
+    .info-cens p,
+    .info-cens li{
+        font-size:18px;
     }
 }
